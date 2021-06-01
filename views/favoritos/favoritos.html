@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/favoritos/favoritos.css">
+    <script src="https://kit.fontawesome.com/b925ec4270.js" crossorigin="anonymous"></script>
+    <script src="favoritos.js" type="module"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-contenedor">
+                <a href="../../index.html"><img class="logo" src="../../img/logo-mobile.svg" alt="logo"></a>
+            </div>
+            <div class="desplegable">
+                    <input type="checkbox" class="menu-check" id="menu">
+                    <label class="menu-label" for="menu">
+                        <i class="fa fa-bars" id="barras" aria-hidden="true"></i>
+                    </label>
+                    <label class="menu-label1" for="menu">
+                        <i class="far fa-times-circle"></i>
+                    </label>
+                    <nav class="menu-lista">
+                        <ul>
+                            <li><a id="nocturno">Modo Nocturno</a></li>
+                            <li><a href="../../views/favoritos/favoritos.html">Favoritos</a></li>
+                            <li><a href="../../views/misGifos/misGifos.html">Mis GIFOS</a></li>
+                        </ul>
+                    </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="titulo">
+            <h1><span class="span-gifos"> <img src="../../img/icon-favoritos.svg" alt=""> <br> </span> Favoritos </h1>
+        </section>
+        <section class="contenido" id="favoritos">
+            
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="trend-gifos">
+            <h2 class="titulo">
+                Trendind GIFOS
+            </h2>
+            <p class="texto">
+                Mira los últimos <br>
+                GIFOS de nuestra comunidad.
+            </p>
+
+            <div class="gifos">
+                <input type="button" value="<" class="flecha derecha">
+                <div class="gifosContendido" id="GifosTrend">
+
+                </div>
+                <input type="button" value=">" class="flecha izquierda">
+            </div>
+
+            <div id="Zoom_div" class="zoom">
+                <button class="cerrar" id="zoom-cerrar">&times;</button>
+                <div class="zoom-contenido" id="zoom-cont">
+                </div>
+            </div>
+        </section>
+        <section class="redes">
+            <p class="texto">
+                Compartir en:
+            </p>
+            <div class="iconos">
+                <i class="fab fa-facebook icon"></i>
+                <i class="fab fa-twitter icon"></i>
+                <i class="fab fa-instagram icon"></i>
+            </div>
+        </section>
+        <section class="derechos">
+            <p class="texto">
+                &copy;GIFOS 2020 All Rights Reserved.
+            </p>
+        </section>
+    </footer>
+</body>
+
+</html>

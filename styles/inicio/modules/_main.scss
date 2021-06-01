@@ -1,0 +1,226 @@
+.principal{
+
+    .titulo{
+        width: 76.5%;
+        margin: 0 auto;
+        @include modooscuro;
+
+        h1{
+            @include Montserrat-bold(25px,$text_color,33px);
+            .span-gifos{
+                color: $text_color_secondary;
+            }
+
+            body.dark &{
+                color: white;
+            }
+
+        }
+        
+    }
+
+    .busqueda{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        @include modooscuro;
+
+        .bus-img{
+            width: calc(198px + 14%);
+            img{
+                width: 100%;
+            }
+        }
+
+        
+
+        .bus-section{   
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            width: calc(259px + 25% ); 
+            min-height: 50px;
+            border: 1px solid $color;
+            border-radius: 7vw;
+
+            body.dark &{
+                &{
+                    border: 1px solid white;
+                }
+
+                .busqueda{
+                    background-color: $bg_color_nocturno;
+                    color:  #9CAFC3;
+                }
+
+                .icon{
+                    color: white;;
+                }
+            }
+
+            .bus-barra{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                width: 100%; 
+                
+    
+                .busqueda{
+                    width: 65.7%;
+                    height: 45%;
+                    margin: 0;
+                    border: none;
+                    @include Roboto-regular(16px,black,20px);
+                    text-align: left;
+                    
+                    &:focus{
+                        outline: 0;
+                    }
+                }
+
+                .icon{
+                    color: $color;
+                    font-size: 20px;
+                    margin-left: 7.3%;
+                }
+
+            }
+
+            .sugerencias{
+                display: none;
+                margin: 10px 0;
+                width: calc(65.7% + 44px);
+
+                .sugerencias-lista{
+                    list-style: none;
+                    width: 100%;
+
+                    li{
+                        text-align: left;
+                        width: 100%;
+                    }
+                    
+                }
+            }
+        }
+        
+
+    }
+
+    .trending{
+        width: 60%;
+        margin: 3.7vh auto 0;
+        @include modooscuro;
+
+        .trend-titulo{
+            @include Montserrat-bold(16px,$text_color,25px);
+        }
+        .trend-text{
+            @include Montserrat-medium(14px,$text_color,25px);
+        }
+
+        body.dark &{
+            .trend-titulo, .trend-text{
+                color: white;
+            }
+        }
+    }
+
+    .bus-resultado{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+
+        @include modooscuro;
+        
+        .gifItem {
+            margin: 22px;
+            position: relative;
+
+            .img {
+                width: 243px;
+                height: 187px;
+            }
+
+            .gifHover{
+                display: none;
+            }
+
+            &:hover .gifHover{
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.7;
+                background: #572EE5;
+
+                .icons{
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: flex-end;
+
+                    .icon{
+                        width: 32px;
+                        height: 32px;
+                        border:none;
+                        border-radius: 6px;
+                        margin: 1%;
+                        cursor: pointer;
+                    }
+                }
+
+                .text{
+                    width: 100%;
+                    height: 50%;
+
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: flex-start;
+                    color: white;
+
+                    span{
+                        width: auto;
+                        margin-left: 5%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .principal{
+
+        .titulo{
+            width: 580px;
+            margin-top: 76px;   
+
+            h1{
+                @include Montserrat-bold(35px,$text_color,50px);
+            }
+            
+        }
+
+        .trending{
+            width: 60%;
+            margin: 73px auto 0;
+    
+            .trend-titulo{
+                @include Montserrat-bold(18px,$text_color,25px);
+            }
+            .trend-text{
+                @include Montserrat-medium(16px,$text_color,25px);
+            }
+        }
+    }
+}
