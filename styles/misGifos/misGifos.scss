@@ -1,5 +1,12 @@
-@import 'modules/variables';
-@import 'modules/generales';
-@import 'modules/header';
+// @import 'modules/variables';
+// @import 'modules/generales';
+// @import 'modules/header';
+// @import 'modules/main';
+// @import 'modules/footer';
+
+@import '../generales/variables';
+@import '../generales/generales';
+@import '../generales/header';
 @import 'modules/main';
-@import 'modules/footer';
+@import '../generales/footer';
+

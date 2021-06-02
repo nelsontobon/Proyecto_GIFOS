@@ -1,5 +1,5 @@
-@import 'modules/variables';
-@import 'modules/generales';
-@import 'modules/header';
+@import '../generales/variables';
+@import '../generales/generales';
+@import '../generales/header';
 @import 'modules/main';
-@import 'modules/footer';
+@import '../generales/footer';

@@ -15,6 +15,7 @@ body {
   width: 100%;
   margin: 0px;
   padding: 0px;
+  border: none;
   background-color: white;
   -webkit-transition: 1s ease all;
   transition: 1s ease all;
