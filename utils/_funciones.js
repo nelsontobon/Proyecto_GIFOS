@@ -22,9 +22,10 @@ export async function guardarGIF(urlGIF,title){
  * @param {*} data Datos del request TrendGifos 
  */
 
-export function addFavoritos(btnFav,Favoritos,data){
+export function addFavoritos(btnFav,data){
+    let Favoritos = JSON.parse(localStorage.getItem('Favoritos')) ? JSON.parse(localStorage.getItem('Favoritos')) : []
     if (Favoritos.length > 0 ){
-        let indice = Favoritos.findIndex(Favoritos => Favoritos.id === data.id);
+        let indice = Favoritos.findIndex(Favoritos => Favoritos.id === data.id );
         if (indice > -1){
             Favoritos.splice(indice,1)
             localStorage.setItem('Favoritos', JSON.stringify(Favoritos))
@@ -34,7 +35,6 @@ export function addFavoritos(btnFav,Favoritos,data){
             localStorage.setItem('Favoritos', JSON.stringify(Favoritos))
             btnFav.innerHTML =  '<img src="../../img/icon-fav-active.svg" alt="Fac"></img>'
         }   
-        
     }else{
         Favoritos.push(data)
         localStorage.setItem('Favoritos', JSON.stringify(Favoritos))

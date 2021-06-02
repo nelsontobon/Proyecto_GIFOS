@@ -61,7 +61,7 @@ window.onload = ()=>{
                 contBusqueda.innerHTML = ''
 
                 for (let item in Response.data){
-                    renderGif(Response.data[item],contBusqueda)
+                    renderGif(Response.data[item],contBusqueda);
                 }
                 busqPalabra.value = ''
             }

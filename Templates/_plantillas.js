@@ -8,13 +8,13 @@
  */
 
 
-export function planTrendingGifos (url,titulo, id, imgFav) { 
+export function planTrendingGifos (url,titulo, id, imgFav,fuente) { 
     return  `   <img src="${url}"  class="img">
                 <div class="gifHover">
                     <div class="icons">
-                        <button class="icon" id= "Fav-${id}" type="button"><img src="../../img/icon-fav-${imgFav}.svg" alt="fav"></button>
-                        <button class="icon" id= "Des-${id}" type="button"><img src="../../img/icon-download-hover.svg" alt="des"></button>
-                        <button class="icon" id= "Zoom-${id}" type="button"><img src="../../img/icon-max-normal.svg" alt="max"></button>
+                        <button class="icon" id= "${fuente}-Fav-${id}" type="button"><img src="../../img/icon-fav-${imgFav}.svg" alt="fav"></button>
+                        <button class="icon" id= "${fuente}-Des-${id}" type="button"><img src="../../img/icon-download-hover.svg" alt="des"></button>
+                        <button class="icon" id= "${fuente}-Zoom-${id}" type="button"><img src="../../img/icon-max-normal.svg" alt="max"></button>
                     </div>
                     <div class="text">
                         <span>

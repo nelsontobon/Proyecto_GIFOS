@@ -7,7 +7,7 @@ export function TrendGifos(){
             let gifos = document.getElementById('GifosTrend');
 
             for (let item in Response.data ) {
-                renderGif(Response.data[item],gifos)
+                renderGif(Response.data[item],gifos,'Trend');
             }  
         }
     )

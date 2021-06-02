@@ -6,35 +6,33 @@ import {planTrendingGifos,planZoomGif} from '../Templates/_plantillas.js'
  * @param {*} dataItem obejeto de respuesta de la API GIPHY a por gif
  * @param {*} contenedorPadre referencia al contenedor padre donde se hara la insercion del gif
  */
-export function renderGif(dataItem,contenedorPadre) {
+export function renderGif(dataItem,contenedorPadre,fuente) {
 
     let gifos = contenedorPadre;
     let Favoritos = JSON.parse(localStorage.getItem('Favoritos')) ? JSON.parse(localStorage.getItem('Favoritos')) : []
-
-
     let imgFav = Favoritos.findIndex(Favoritos => Favoritos.id === dataItem.id) > -1 ? 'active' : 'hover'
 
     const newGif = document.createElement('div');
-    newGif.innerHTML = planTrendingGifos(dataItem.images['original'].url, dataItem.title, dataItem.id, imgFav);
+    newGif.innerHTML = planTrendingGifos(dataItem.images['original'].url, dataItem.title, dataItem.id, imgFav,fuente);
     newGif.setAttribute('class', 'gifItem')
     gifos.append(newGif)
 
     //================= btn favoritos ======================
-    let btnFav = document.getElementById(`Fav-${dataItem.id}`)
-    btnFav.addEventListener('click', () => {
-        addFavoritos(btnFav, Favoritos, dataItem)
+    let btnFav = document.getElementById(`${fuente}-Fav-${dataItem.id}`)
+    btnFav.addEventListener('click', (event) => {
+        event.stopPropagation();
+        addFavoritos(btnFav, dataItem)
     })
 
     //================= btn Decargar ======================
-    let btnDes = document.getElementById(`Des-${dataItem.id}`)
+    let btnDes = document.getElementById(`${fuente}-Des-${dataItem.id}`)
     btnDes.addEventListener('click', () => {
         guardarGIF(dataItem.images['original'].url, dataItem.title)
     })
 
     //================= btn Zoom ======================
-    let btnZoom = document.getElementById(`Zoom-${dataItem.id}`)
+    let btnZoom = document.getElementById(`${fuente}-Zoom-${dataItem.id}`)
     btnZoom.addEventListener('click', () => {
-
 
         let zoom = document.getElementById("Zoom_div");
         let zoomContenido = document.getElementById('zoom-cont')

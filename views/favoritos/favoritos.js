@@ -12,10 +12,10 @@ window.onload = ()=>{
         let Favoritos = localStorage.getItem('Favoritos')
         let gifos = document.getElementById('favoritos')
         Favoritos = JSON.parse(Favoritos);
-        console.log(Favoritos)
 
         for (let item in Favoritos ) {
-            renderGif(Favoritos[item],gifos)
+            // Favoritos[item].id = Favoritos[item]
+            renderGif(Favoritos[item],gifos,'Favs')
         }
     }
 }//fin onload
