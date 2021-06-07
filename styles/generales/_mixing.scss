@@ -1,0 +1,141 @@
+@mixin modooscuro() {
+    transition: 1s ease all;
+}
+        
+@mixin Montserrat-bold ($tamaño,$color,$line-height) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: $tamaño;
+    color: $color;
+    line-height: $line-height;
+    text-align: center;
+}
+
+@mixin Montserrat-medium ($tamaño,$color,$line-height) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: medium;
+    font-size: $tamaño;
+    color: $color;
+    line-height: $line-height;
+    text-align: center;
+}
+    
+@mixin Roboto-regular ($tamaño,$color,$line-height) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: medium;
+    font-size: $tamaño;
+    color: $color;
+    line-height: $line-height;
+    text-align: center;
+    opacity: none;
+}
+
+@mixin Roboto-bold ($tamaño,$color,$line-height) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: $tamaño;
+    color: $color;
+    line-height: $line-height;
+    text-align: center;
+    opacity: none;
+}
+
+@mixin GifItem($width-s,$height-s,$width-m,$height-m,$width-d,$height-d) {
+    .gifItem {
+        margin: 10.5px;
+        position: relative;
+        overflow: hidden;
+
+        .img {
+            // width: 243px;
+            // height: 187px;
+            width: $width-s;
+            height: $height-s;
+        }
+
+        .gifHover{
+            display: none;
+        }
+
+        &:hover .gifHover{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+            background: #572EE5;
+
+            .icons{
+                width: 100%;
+                height: 50%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-end;
+
+                .icon{
+                    width: 32px;
+                    height: 32px;
+                    border:none;
+                    border-radius: 6px;
+                    margin: 1%;
+                    cursor: pointer;
+                }
+            }
+
+            .text{
+                width: 100%;
+                height: 50%;
+
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: flex-start;
+                color: white;
+
+                .user{
+                    @include Roboto-regular (15px,white,23px);
+                }
+
+                .gif-titulo{
+                    @include Roboto-bold (16px,white,23px);
+                }
+
+                .user,.gif-titulo{
+                    width: auto;
+                    margin-left: 5%;
+                    text-align: left;
+                }
+
+                
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        .gifItem {
+            margin: 14.5px;
+
+            .img {
+                // width: 334px;
+                // height: 228px;
+                width: $width-m;
+                height: $height-m;
+            }
+        }
+    }
+    
+    @media (min-width: 1440px) {
+
+        .gifItem {
+            margin: 14.5px;
+            .img {
+                width: $width-d;
+                height: $height-d;
+            }
+        }
+    }
+
+}//fin mixing

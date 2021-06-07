@@ -17,10 +17,10 @@ export function planTrendingGifos (url,titulo, id, imgFav,fuente) {
                         <button class="icon" id= "${fuente}-Zoom-${id}" type="button"><img src="../../img/icon-max-normal.svg" alt="max"></button>
                     </div>
                     <div class="text">
-                        <span>
+                        <span class="user">
                             User
                         </span>
-                        <span>
+                        <span class="gif-titulo">
                         ${titulo}
                         </span>
                     </div>

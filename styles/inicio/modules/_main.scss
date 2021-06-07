@@ -44,7 +44,7 @@
             width: calc(259px + 25% ); 
             min-height: 50px;
             border: 1px solid $color;
-            border-radius: 7vw;
+            border-radius:27px;
 
             body.dark &{
                 &{
@@ -94,12 +94,14 @@
                 display: none;
                 margin: 10px 0;
                 width: calc(65.7% + 44px);
+                border-top: 1px solid #9CAFC3;
 
                 .sugerencias-lista{
                     list-style: none;
                     width: 100%;
 
                     li{
+                        @include Roboto-regular(16px,#9CAFC3,20px);
                         text-align: left;
                         width: 100%;
                     }
@@ -137,64 +139,8 @@
         justify-content: space-evenly;
 
         @include modooscuro;
+        @include GifItem(156px,120px,240px,190px,260px,200px);
         
-        .gifItem {
-            margin: 22px;
-            position: relative;
-
-            .img {
-                width: 243px;
-                height: 187px;
-            }
-
-            .gifHover{
-                display: none;
-            }
-
-            &:hover .gifHover{
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                opacity: 0.7;
-                background: #572EE5;
-
-                .icons{
-                    width: 100%;
-                    height: 50%;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: flex-end;
-
-                    .icon{
-                        width: 32px;
-                        height: 32px;
-                        border:none;
-                        border-radius: 6px;
-                        margin: 1%;
-                        cursor: pointer;
-                    }
-                }
-
-                .text{
-                    width: 100%;
-                    height: 50%;
-
-                    display: flex;
-                    flex-flow: column nowrap;
-                    justify-content: center;
-                    align-items: flex-start;
-                    color: white;
-
-                    span{
-                        width: auto;
-                        margin-left: 5%;
-                    }
-                }
-            }
-        }
     }
 }
 

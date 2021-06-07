@@ -12,36 +12,7 @@ $color: #572EE5;
 $text_color: #572EE5;
 $text_color_secondary:#50e3c2;
 
-@mixin modooscuro() {
-    transition: 1s ease all;
-}
-        
-@mixin Montserrat-bold ($tamaño,$color,$line-height) {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: $tamaño;
-    color: $color;
-    line-height: $line-height;
-    text-align: center;
-}
-
-@mixin Montserrat-medium ($tamaño,$color,$line-height) {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: medium;
-    font-size: $tamaño;
-    color: $color;
-    line-height: $line-height;
-    text-align: center;
-}
-    
-@mixin Roboto-regular ($tamaño,$color,$line-height) {
-    font-family: 'Roboto', sans-serif;
-    font-weight: medium;
-    font-size: $tamaño;
-    color: $color;
-    line-height: $line-height;
-    text-align: center;
-}
+// 
 
 // font-family: 'Montserrat', sans-serif;
 // font-family: 'Roboto', sans-serif;

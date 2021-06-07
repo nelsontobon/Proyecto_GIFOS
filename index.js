@@ -11,7 +11,7 @@ window.onload = ()=>{
     reqTrendigTerms().then(
         (Response) => {
             let busquedas = document.getElementById('TrendingTerms')
-            busquedas.innerHTML = Response.data.slice(0,5).toString()
+            busquedas.innerHTML = Response.data.slice(0,5).join(', ')
         }
     )
 
@@ -33,9 +33,12 @@ window.onload = ()=>{
                 let sugerencias = document.getElementById('segeridos')
                 let sugerenciasLista =document.getElementById('sug-lista')
 
-                busBarra.style.margin = '10px 0 0 0'
+                busBarra.style.marginTop = '10px'
+
                 sugerencias.style.display = 'block'
-                sugerencias.style.borderRadius = '10px'
+                sugerencias.style.paddingTop = '10px'
+
+
                 sugerenciasLista.innerHTML = '' 
 
                 for (let i in Response.data){
@@ -48,7 +51,7 @@ window.onload = ()=>{
     })
 
     function BuscarGifs (){
-        reqBusqResult(busqPalabra.value,14).then(
+        reqBusqResult(busqPalabra.value,16).then(
             (Response) => {
                 let contBusqueda = document.getElementById('bus-resul')
                 let sugerencias = document.getElementById('segeridos')

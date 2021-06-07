@@ -75,14 +75,9 @@ body.dark .header::before {
   height: 95px;
 }
 
-.header .header-content .logo-contenedor {
-  width: 48.8px;
-  height: 48.8px;
-}
-
 .header .header-content .logo-contenedor .logo {
-  width: 100%;
-  height: 100%;
+  width: 58px;
+  height: 49px;
 }
 
 .header .header-content > div {
@@ -136,12 +131,11 @@ body.dark .header .header-content .menu-lista {
 }
 
 .header .header-content .menu-lista ul li a:hover {
-  color: #00F3BB;
-  text-decoration: line-through;
+  border-bottom: 2px solid #5ED7C6;
 }
 
 .header .header-content .menu-lista ul li a:active {
-  color: rgba(6, 10, 36, 0.56);
+  color: #9CAFC3;
 }
 
 .header .header-content .menu-check {
@@ -159,6 +153,7 @@ body.dark .header .header-content .menu-lista {
 .header .header-content .menu-check:checked ~ .menu-lista {
   display: block;
   position: absolute;
+  z-index: 99;
   -webkit-animation: menu-lista-visible 0.5s linear;
           animation: menu-lista-visible 0.5s linear;
   -webkit-animation-direction: normal;
@@ -209,9 +204,9 @@ body.dark .header .header-content .menu-label1 {
   .header .header-content {
     height: 90px;
   }
-  .header .header-content .logo-contenedor {
-    width: 59.1px;
-    height: 59.1px;
+  .header .header-content .logo-contenedor .logo {
+    width: 72px;
+    height: 60px;
   }
   .header .header-content div {
     margin: 0% 7% 0% 7%;
@@ -345,7 +340,7 @@ body.dark .principal .titulo h1 {
   width: calc(259px + 25%);
   min-height: 50px;
   border: 1px solid #572EE5;
-  border-radius: 7vw;
+  border-radius: 27px;
 }
 
 body.dark .principal .busqueda .bus-section {
@@ -389,6 +384,7 @@ body.dark .principal .busqueda .bus-section .icon {
   color: black;
   line-height: 20px;
   text-align: center;
+  opacity: none;
   text-align: left;
 }
 
@@ -406,6 +402,7 @@ body.dark .principal .busqueda .bus-section .icon {
   display: none;
   margin: 10px 0;
   width: calc(65.7% + 44px);
+  border-top: 1px solid #9CAFC3;
 }
 
 .principal .busqueda .bus-section .sugerencias .sugerencias-lista {
@@ -414,6 +411,13 @@ body.dark .principal .busqueda .bus-section .icon {
 }
 
 .principal .busqueda .bus-section .sugerencias .sugerencias-lista li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: medium;
+  font-size: 16px;
+  color: #9CAFC3;
+  line-height: 20px;
+  text-align: center;
+  opacity: none;
   text-align: left;
   width: 100%;
 }
@@ -466,13 +470,14 @@ body.dark .principal .trending .trend-titulo, body.dark .principal .trending .tr
 }
 
 .principal .bus-resultado .gifItem {
-  margin: 22px;
+  margin: 10.5px;
   position: relative;
+  overflow: hidden;
 }
 
 .principal .bus-resultado .gifItem .img {
-  width: 243px;
-  height: 187px;
+  width: 156px;
+  height: 120px;
 }
 
 .principal .bus-resultado .gifItem .gifHover {
@@ -533,9 +538,50 @@ body.dark .principal .trending .trend-titulo, body.dark .principal .trending .tr
   color: white;
 }
 
-.principal .bus-resultado .gifItem:hover .gifHover .text span {
+.principal .bus-resultado .gifItem:hover .gifHover .text .user {
+  font-family: 'Roboto', sans-serif;
+  font-weight: medium;
+  font-size: 15px;
+  color: white;
+  line-height: 23px;
+  text-align: center;
+  opacity: none;
+}
+
+.principal .bus-resultado .gifItem:hover .gifHover .text .gif-titulo {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  line-height: 23px;
+  text-align: center;
+  opacity: none;
+}
+
+.principal .bus-resultado .gifItem:hover .gifHover .text .user, .principal .bus-resultado .gifItem:hover .gifHover .text .gif-titulo {
   width: auto;
   margin-left: 5%;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .principal .bus-resultado .gifItem {
+    margin: 14.5px;
+  }
+  .principal .bus-resultado .gifItem .img {
+    width: 240px;
+    height: 190px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .principal .bus-resultado .gifItem {
+    margin: 14.5px;
+  }
+  .principal .bus-resultado .gifItem .img {
+    width: 260px;
+    height: 200px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -606,6 +652,7 @@ body.dark .principal .trending .trend-titulo, body.dark .principal .trending .tr
   color: black;
   line-height: 23px;
   text-align: center;
+  opacity: none;
   margin-bottom: 32px;
 }
 
@@ -656,8 +703,9 @@ body.dark .principal .trending .trend-titulo, body.dark .principal .trending .tr
 }
 
 .footer .trend-gifos .gifos .gifosContendido .gifItem {
-  margin: 22px;
+  margin: 10.5px;
   position: relative;
+  overflow: hidden;
 }
 
 .footer .trend-gifos .gifos .gifosContendido .gifItem .img {
@@ -723,9 +771,50 @@ body.dark .principal .trending .trend-titulo, body.dark .principal .trending .tr
   color: white;
 }
 
-.footer .trend-gifos .gifos .gifosContendido .gifItem:hover .gifHover .text span {
+.footer .trend-gifos .gifos .gifosContendido .gifItem:hover .gifHover .text .user {
+  font-family: 'Roboto', sans-serif;
+  font-weight: medium;
+  font-size: 15px;
+  color: white;
+  line-height: 23px;
+  text-align: center;
+  opacity: none;
+}
+
+.footer .trend-gifos .gifos .gifosContendido .gifItem:hover .gifHover .text .gif-titulo {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  line-height: 23px;
+  text-align: center;
+  opacity: none;
+}
+
+.footer .trend-gifos .gifos .gifosContendido .gifItem:hover .gifHover .text .user, .footer .trend-gifos .gifos .gifosContendido .gifItem:hover .gifHover .text .gif-titulo {
   width: auto;
   margin-left: 5%;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .footer .trend-gifos .gifos .gifosContendido .gifItem {
+    margin: 14.5px;
+  }
+  .footer .trend-gifos .gifos .gifosContendido .gifItem .img {
+    width: 334px;
+    height: 228px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer .trend-gifos .gifos .gifosContendido .gifItem {
+    margin: 14.5px;
+  }
+  .footer .trend-gifos .gifos .gifosContendido .gifItem .img {
+    width: 357px;
+    height: 275px;
+  }
 }
 
 body.dark .footer .trend-gifos {
@@ -868,6 +957,7 @@ body.dark .footer .trend-gifos .zoom .cerrar, body.dark .footer .trend-gifos .zo
   color: black;
   line-height: 20px;
   text-align: center;
+  opacity: none;
 }
 
 .footer .redes .iconos {
@@ -897,6 +987,7 @@ body.dark .footer .redes .texto {
   color: black;
   line-height: 20px;
   text-align: center;
+  opacity: none;
 }
 
 body.dark .footer .derechos .texto {
@@ -949,6 +1040,7 @@ body.dark .footer::after {
     color: black;
     line-height: 23px;
     text-align: center;
+    opacity: none;
     margin-bottom: 53px;
   }
   .footer .trend-gifos .gifos {
@@ -1010,6 +1102,7 @@ body.dark .footer::after {
     color: black;
     line-height: 20px;
     text-align: center;
+    opacity: none;
   }
 }
 
@@ -1066,6 +1159,7 @@ body.dark .footer::after {
     color: black;
     line-height: 23px;
     text-align: center;
+    opacity: none;
     margin-bottom: 53px;
   }
   .footer .trend-gifos .gifos {
@@ -1127,6 +1221,7 @@ body.dark .footer::after {
     color: black;
     line-height: 20px;
     text-align: center;
+    opacity: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */
