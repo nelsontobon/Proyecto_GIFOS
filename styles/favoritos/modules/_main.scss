@@ -14,12 +14,49 @@
 
     .contenido{
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column nowrap;
         align-items: center;
-        justify-content: space-evenly;
 
-        @include modooscuro;
-        @include GifItem(156px,120px,240px,190px,260px,200px);
+        .contenido-gifs{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include modooscuro;
+            @include GifItem(156px,120px,240px,190px,260px,200px);
+
+            .sinResultados{
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                margin-top: 30px;
+                p{  
+                    margin-top: 15px;
+                    @include Montserrat-bold(22px,#50E3C2,25px);  
+                }
+            }
+        }
+        
+
+        .bus-ver{
+            margin-top: 68px;
+            button{
+                width: 127px;
+                height: 50px;
+                background-color: transparent;
+                border: 1px solid $color;
+                border-radius: 25px;
+                @include Montserrat-bold(13px,$color,0px);
+                cursor: pointer;
+
+                &:hover{
+                    background-color: $color;
+                    color: white;
+                    border-color: white;
+                }
+            }
+        }
     }
 }
 

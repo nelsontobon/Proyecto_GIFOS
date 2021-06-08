@@ -16,11 +16,13 @@ export async function reqTrendigGifos(gifos){
     return response
 }
 
-export async function reqBusqResult(busqueda,gifos){
+export async function reqBusqResult(busqueda, gifos, offset){
     const req = new URL('https://api.giphy.com/v1/gifs/search')
     req.searchParams.append('api_key', 'FKRvUkbOjkoSEknyMM1l6ZaA1WIdRdqJ')
     req.searchParams.append('q', busqueda)
     req.searchParams.append('limit', gifos)
+    req.searchParams.append('offset', offset)
+    
     // req.searchParams.append('rating', 'g')
 
     let response = await fetch(req)
@@ -29,7 +31,7 @@ export async function reqBusqResult(busqueda,gifos){
     return response
 }
 
-export async function reqBusqSugerencia(busqueda,items){
+export async function reqBusqSugerencia(busqueda,items){ 
     const req = new URL('https://api.giphy.com/v1/gifs/search/tags')
     req.searchParams.append('api_key', 'FKRvUkbOjkoSEknyMM1l6ZaA1WIdRdqJ')
     req.searchParams.append('q', busqueda)

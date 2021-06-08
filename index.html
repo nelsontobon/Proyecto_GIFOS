@@ -52,7 +52,10 @@
             <section class="bus-section" id="busquedaSection">
                 <div class="bus-barra" id="cont-barra">
                     <input type="search" name="barra" id="busqueda-barra" class="busqueda" placeholder="Busca GIFOS y más">
-                    <i class="fas fa-search icon" id="bus-icon"></i>
+                    <span class='icon' id="bus-icon">
+                        <i class="fas fa-search " id="bus-icon-busq"></i>
+                        <i class="fas fa-times " id="bus-icon-close"></i>
+                    </span>
                 </div>
                 <div class="sugerencias" id="segeridos">
                     <ol class="sugerencias-lista" id="sug-lista">
@@ -66,8 +69,18 @@
             <h2 class="trend-titulo">Trending:</h2>
             <p class="trend-text" id="TrendingTerms"></p>
         </section>
-
-        <section class="bus-resultado" id="bus-resul">
+            
+        <section class="bus-resultado busq" id="bus-resul">
+            <div class="busq-titulo busq" id="bus-titu">
+                titulo
+            </div>
+            <div class="bus-contenido busq" id="bus-conten">
+                
+                
+            </div>
+            <div class="bus-ver busq" id="vermas">
+                <button>VER MÁS</button>
+            </div>
         </section>
     </main>
 
@@ -89,11 +102,6 @@
                 <input type="button" value=">" class="flecha izquierda">
             </div>
 
-            <div id="Zoom_div" class="zoom">
-                <button class="cerrar" id="zoom-cerrar">&times;</button>
-                <div class="zoom-contenido" id="zoom-cont">
-                </div>
-            </div>
         </section>
         <section class="redes">
             <p class="texto">
@@ -111,5 +119,10 @@
             </p>
         </section>
     </footer>
+    <div id="Zoom_div" class="zoom">
+        <button class="cerrar" id="zoom-cerrar">&times;</button>
+        <div class="zoom-contenido" id="zoom-cont">
+        </div>
+    </div>
 </body>
 </html>

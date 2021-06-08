@@ -57,7 +57,7 @@
                 }
 
                 .icon{
-                    color: white;;
+                    color: white;
                 }
             }
 
@@ -86,6 +86,15 @@
                     color: $color;
                     font-size: 20px;
                     margin-left: 7.3%;
+                    cursor: pointer;
+
+                    #bus-icon-busq{
+                        display: block;
+                    }
+
+                    #bus-icon-close{
+                        display: none;
+                    }
                 }
 
             }
@@ -133,13 +142,58 @@
     }
 
     .bus-resultado{
-        display: flex;
-        flex-flow: row wrap;
+        display: none;
+        flex-flow: column nowrap;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        margin-top: 10px;
 
         @include modooscuro;
-        @include GifItem(156px,120px,240px,190px,260px,200px);
+
+        .busq-titulo{
+            text-transform: capitalize;
+            margin-top: 79px ;
+            margin-bottom: 38px;
+            @include Montserrat-bold(25px,$color,40px)
+        }
+
+        .bus-contenido{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include modooscuro;
+            @include GifItem(156px,120px,240px,190px,260px,200px);
+        }
+        
+        .bus-ver{
+            margin-top: 68px;
+            button{
+                width: 127px;
+                height: 50px;
+                background-color: transparent;
+                border: 1px solid $color;
+                border-radius: 25px;
+                @include Montserrat-bold(13px,$color,0px);
+                cursor: pointer;
+
+                &:hover{
+                    background-color: $color;
+                    color: white;
+                    border-color: white;
+                }
+            }
+            
+        }
+        .sinResultados{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            p{
+                @include Montserrat-bold(22px,#50E3C2,25px);  
+            }
+        }
         
     }
 }
@@ -166,6 +220,14 @@
             }
             .trend-text{
                 @include Montserrat-medium(16px,$text_color,25px);
+            }
+        }
+
+        .bus-resultado{
+            .busq-titulo{
+                margin-top: 79px ;
+                margin-bottom: 59px;
+                @include Montserrat-bold(35px,$color,30px)
             }
         }
     }
