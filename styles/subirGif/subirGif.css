@@ -435,39 +435,6 @@ body.dark .header .header-content .menu-label1 {
 }
 
 /* ------------FIN Vista escritorio ------------*/
-.principal .titulo {
-  width: 76.5%;
-  margin: 0 auto;
-}
-
-.principal .titulo h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 25px;
-  color: #572EE5;
-  line-height: 33px;
-  text-align: center;
-}
-
-.principal .titulo h1 .span-gifos {
-  color: #50e3c2;
-}
-
-@media (min-width: 768px) {
-  .principal .titulo {
-    width: 580px;
-    margin-top: 76px;
-  }
-  .principal .titulo h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 35px;
-    color: #572EE5;
-    line-height: 50px;
-    text-align: center;
-  }
-}
-
 .footer {
   margin-top: 45px;
   -webkit-transition: 1s ease all;
@@ -963,6 +930,207 @@ body.dark .footer::after {
     line-height: 20px;
     text-align: center;
     opacity: none;
+  }
+}
+
+.principal {
+  width: 100%;
+  min-height: 541.9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.principal .camara {
+  min-width: 214px;
+  width: 214px;
+  margin-right: 4px;
+  margin-top: 124px;
+}
+
+.principal .camara .luz {
+  min-width: 91px;
+  min-height: 151px;
+  width: 91px;
+  height: 151px;
+  background-image: linear-gradient(267deg, rgba(136, 243, 226, 0) 22%, #50E3C2 100%);
+  -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 67%);
+          clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 67%);
+  float: right;
+}
+
+.principal .contenido {
+  min-width: 795.9px;
+  width: 795.9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.principal .contenido .contenido-gif {
+  border: 1px solid #572EE5;
+  min-width: 680px;
+  min-height: 390px;
+  width: 680px;
+  height: 390px;
+  position: relative;
+}
+
+.principal .contenido .contenido-gif .Gif {
+  width: 480px;
+  height: 320px;
+  margin: 35px 104px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.principal .contenido .contenido-gif .Gif .titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: #572EE5;
+  line-height: 35px;
+  text-align: center;
+}
+
+.principal .contenido .contenido-gif .Gif .titulo span {
+  color: #50E3C2;
+}
+
+.principal .contenido .contenido-gif .Gif .texto {
+  font-family: 'Roboto', sans-serif;
+  font-weight: medium;
+  font-size: 16px;
+  color: black;
+  line-height: 29px;
+  text-align: center;
+  opacity: none;
+}
+
+.principal .contenido .contenido-gif .video {
+  width: 480px;
+  height: 320px;
+}
+
+.principal .contenido .contenido-gif .label {
+  position: absolute;
+  right: 0;
+  bottom: -52px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #572EE5;
+  line-height: 22px;
+  text-align: center;
+}
+
+.principal .contenido .contenido-gif .label .link {
+  border-bottom: 2px solid #5ED7C6;
+  cursor: pointer;
+}
+
+.principal .contenido .pasos {
+  width: 152px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.principal .contenido .pasos span {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #572EE5;
+  border-radius: 50%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: medium;
+  font-size: 18px;
+  color: #572EE5;
+  line-height: 33px;
+  text-align: center;
+  opacity: none;
+  margin-top: 24px;
+}
+
+.principal .contenido .separador {
+  display: inline-block;
+  min-width: 100%;
+  min-height: 6.9px;
+  background: #572EE5;
+  border-radius: 5px;
+  margin-top: 19px;
+}
+
+.principal .contenido .btn {
+  width: 127px;
+  height: 50px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: #572EE5;
+  line-height: none;
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+}
+
+.principal .contenido .Comenzar {
+  display: block;
+}
+
+.principal .pelicula {
+  margin-left: 13.1px;
+  margin-top: 382px;
+}
+
+.footer {
+  max-height: 116px;
+  margin-top: 0;
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    margin-top: 0;
   }
 }
 /*# sourceMappingURL=subirGif.css.map */

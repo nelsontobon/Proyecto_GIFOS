@@ -55,3 +55,15 @@ export async function reqTrendigTerms(){
 }
 
 
+export async function subirGif(form) {
+    form.append('api_key', 'FKRvUkbOjkoSEknyMM1l6ZaA1WIdRdqJ');
+
+    let response = await fetch('https://upload.giphy.com/v1/gifs', {
+        method: 'POST',
+        body: form
+    })
+
+    response = await response.json()
+    return response
+}
+

@@ -1,30 +1,151 @@
 .principal{
+    width: 100%;
+    min-height: 541.9px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center; 
 
-    .titulo{
-        width: 76.5%;
-        margin: 0 auto;
+    .camara{
+        min-width: 214px ;
+        width: 214px ;
+        margin-right: 4px;
+        margin-top: 124px;
 
-        h1{
-            @include Montserrat-bold(25px,$text_color,33px);
+        .luz{
+            min-width: 91px;
+            min-height: 151px;
+            width: 91px;
+            height: 151px;
+            background-image: linear-gradient(267deg, rgba(136,243,226,0.00) 22%, #50E3C2 100%);
+            clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 67%);
+            float: right;
+        }
+    }
 
-            .span-gifos{
-                color: $text_color_secondary;
+    .contenido{
+        
+        min-width: 795.9px;
+        width: 795.9px;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;    
+
+        .contenido-gif{
+            border: 1px solid #572EE5;
+            min-width: 680px;
+            min-height: 390px;
+            width: 680px;
+            height: 390px;
+            position: relative;
+            
+
+            .Gif{
+                width: 480px;
+                height: 320px;
+                margin: 35px 104px;
+
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                .titulo{
+                    @include Montserrat-bold(25px,$text_color,35px);
+                    span{
+                        color: #50E3C2;
+                    }
+                }
+
+                .texto{
+                    @include Roboto-regular(16px,black,29px); 
+                }
             }
+
+            .video{
+                width: 480px;
+                height: 320px;
+            }
+
+            .label{
+                position: absolute;
+                right: 0;
+                bottom: -52px;
+                @include Montserrat-bold(15px,$text_color,22px);
+
+                .link{
+                    border-bottom: 2px solid #5ED7C6;
+                    cursor: pointer;
+                }
+            }
+
+
+        }
+
+        .pasos{
+            width: 152px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            
+            
+            span {
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                border: 1px solid #572EE5;
+                border-radius: 50%;
+                @include Roboto-regular(18px,$text_color,33px); 
+                margin-top: 24px;
+            }
+
+            
+        }
+
+        .separador{
+            display: inline-block;
+            min-width: 100%;
+            min-height: 6.9px;
+            background: #572EE5;
+            border-radius: 5px;
+            margin-top: 19px;
         }
         
+        .btn {
+            width: 127px;
+            height: 50px;
+            background-color: transparent;
+            cursor: pointer;
+            border: 1px solid #572EE5;
+            border-radius: 25px;
+            @include Montserrat-bold(13px,$text_color,none); 
+            margin-top: 20px;
+            display: none;
+        }
+
+        .Comenzar{
+            display: block;
+        }
+    }
+
+    .pelicula{
+        margin-left: 13.1px;
+        margin-top: 382px;
     }
 }
 
-@media (min-width: 768px){
-    .principal{
-        .titulo{
-            width: 580px;
-            margin-top: 76px;   
 
-            h1{
-                @include Montserrat-bold(35px,$text_color,50px);
-            }
-            
-        }
+// restablecer los margenes del footer
+
+.footer {
+    max-height: 116px;
+    margin-top: 0;
+}
+
+@media (min-width: 1440px) {
+    .footer {
+        margin-top: 0;
     }
 }
