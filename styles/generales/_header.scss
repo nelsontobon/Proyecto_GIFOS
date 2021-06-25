@@ -58,6 +58,10 @@
             }
         
             ul {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
                 margin: 0;
 
                 li {
@@ -89,7 +93,37 @@
                         &:active {
                             color: #9CAFC3;
                         }
+
+                        .add{
+                            display: none;
+                            width: 54px;
+                            height: 54px;
+                            border: 1px solid $color;
+                            border-radius: 50%;
+                            padding-top: 27px;
+                            font-size: 19px;
+                            
+
+                            &:hover{
+                                background-color: $color;
+                                color: white;
+                            }
+
+                            body.dark &{
+                                background-color: transparent;
+                                border: 1px solid white;
+                                color: white;
+
+                                &:hover{
+                                    background-color: white;
+                                    color: #37383C;
+                                }
+                            }
+                        }
                     }
+
+                    
+
                 }
             }
         }
@@ -156,7 +190,6 @@
 /* ------------ Vista escritorio ------------*/
 
 @media (min-width: 768px) {
-
     .header {
         .header-content {
 
@@ -179,6 +212,7 @@
                 display: flex;
                 flex-flow: row nowrap;
                 align-items: center;
+                
                 background-color: white;
                 margin: 0;
 
@@ -189,6 +223,8 @@
                 ul {
                     display: flex;
                     flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
 
                     li {
                         width: 107px;
@@ -207,6 +243,7 @@
                             body.dark &{
                                 color: white;
                             }
+
                         }
                     }
                 }
@@ -232,4 +269,24 @@
     }
 }
 
+
+@media (min-width: 1439px) {
+    .header {
+        .header-content {
+            .menu-lista {
+                ul {
+                    li {
+                        a {
+                            .add{
+                                display: block;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 /* ------------FIN Vista escritorio ------------*/
+

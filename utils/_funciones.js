@@ -28,8 +28,14 @@ export function addFavoritos(btnFav,data){
         let indice = Favoritos.findIndex(Favoritos => Favoritos.id === data.id );
         if (indice > -1){
             Favoritos.splice(indice,1)
-            localStorage.setItem('Favoritos', JSON.stringify(Favoritos))
-            btnFav.innerHTML =  '<img src="../../img/icon-fav-hover.svg" alt="Fav">'
+            if (Favoritos.length > 0){
+                localStorage.setItem('Favoritos', JSON.stringify(Favoritos))
+                btnFav.innerHTML =  '<img src="../../img/icon-fav-hover.svg" alt="Fav">'
+            }else{
+                localStorage.removeItem('Favoritos')
+            }
+            
+            
         }else{
             Favoritos.push(data)
             localStorage.setItem('Favoritos', JSON.stringify(Favoritos))
@@ -40,4 +46,32 @@ export function addFavoritos(btnFav,data){
         localStorage.setItem('Favoritos', JSON.stringify(Favoritos))
         btnFav.innerHTML =  '<img src="../../img/icon-fav-active.svg" alt="Fav"></img>'
     }
+}
+
+export function addMyGif(id){
+    let MyGifs = JSON.parse(localStorage.getItem('MyGifs')) ? JSON.parse(localStorage.getItem('MyGifs')) : []
+    MyGifs.push(id)
+    localStorage.setItem('MyGifs', JSON.stringify(MyGifs))
+}
+
+export function borrarGif(data){
+    let misGifos = JSON.parse(localStorage.getItem('MyGifs')) 
+    if (misGifos.length > 0 ){
+        let indice = misGifos.findIndex(Gifos => Gifos === data.id );
+        if (indice > -1){
+            console.log('encontrado');
+            misGifos.splice(indice,1)
+            if (misGifos.length > 0){
+                localStorage.setItem('MyGifs', JSON.stringify(misGifos))
+            }else{
+                localStorage.removeItem('MyGifs')
+            }
+            
+        }else{
+            console.log('no exitste');
+        }   
+    }
+
+    location.reload();
+
 }

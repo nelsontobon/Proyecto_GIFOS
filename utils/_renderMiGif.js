@@ -1,27 +1,27 @@
-import {guardarGIF,addFavoritos} from './_funciones.js';
-import {planTrendingGifos,planZoomGif} from '../Templates/_plantillas.js'
+import {guardarGIF,addFavoritos,borrarGif} from './_funciones.js';
+import {planMisGifos,planZoomGif} from '../Templates/_plantillas.js'
 
 /**
  * 
  * @param {*} dataItem obejeto de respuesta de la API GIPHY a por gif
  * @param {*} contenedorPadre referencia al contenedor padre donde se hara la insercion del gif
  */
-export function renderGif(dataItem,contenedorPadre,fuente) {
+export function renderMisGifs(dataItem,contenedorPadre,fuente) {
 
     let gifos = contenedorPadre;
     let Favoritos = JSON.parse(localStorage.getItem('Favoritos')) ? JSON.parse(localStorage.getItem('Favoritos')) : []
     let imgFav = Favoritos.findIndex(Favoritos => Favoritos.id === dataItem.id) > -1 ? 'active' : 'hover'
 
     const newGif = document.createElement('div');
-    newGif.innerHTML = planTrendingGifos(dataItem.images['original'].url, dataItem.title, dataItem.id, imgFav,fuente);
+    newGif.innerHTML = planMisGifos(dataItem.images['original'].url, dataItem.title, dataItem.id, imgFav,fuente);
     newGif.setAttribute('class', 'gifItem')
     gifos.append(newGif)
 
     //================= btn favoritos ======================
-    let btnFav = document.getElementById(`${fuente}-Fav-${dataItem.id}`)
-    btnFav.addEventListener('click', (event) => {
+    let btnBor = document.getElementById(`${fuente}-Bor-${dataItem.id}`)
+    btnBor.addEventListener('click', (event) => {
         event.stopPropagation();
-        addFavoritos(btnFav, dataItem)
+        borrarGif(dataItem)
     })
 
     //================= btn Decargar ======================
@@ -44,7 +44,7 @@ export function renderGif(dataItem,contenedorPadre,fuente) {
 
         let zoomBtnFav = document.getElementById(`Zoom-Fav-${dataItem.id}`)
         zoomBtnFav.addEventListener('click', () => {
-            addFavoritos(zoomBtnFav, dataItem)
+            addFavoritos(zoomBtnFav,  dataItem)
         })
 
         let zoomBtnDes = document.getElementById(`Zoom-Des-${dataItem.id}`)

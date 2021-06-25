@@ -67,3 +67,13 @@ export async function subirGif(form) {
     return response
 }
 
+export async function reqMisGifs(ids){
+    const req = new URL('https://api.giphy.com/v1/gifs')
+    req.searchParams.append('api_key', 'FKRvUkbOjkoSEknyMM1l6ZaA1WIdRdqJ')
+    req.searchParams.append('ids', ids)
+
+    let response = await fetch(req)
+    response = await response.json()
+
+    return response
+}

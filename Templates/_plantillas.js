@@ -55,3 +55,24 @@ export function planZoomGif (url, titulo, id, zoomImgFav){
                 </div>
             `;
 }
+
+
+export function planMisGifos (url,titulo, id, imgDel,fuente) { 
+    return  `   <img src="${url}"  class="img">
+                <div class="gifHover">
+                    <div class="icons">
+                        <button class="icon" id= "${fuente}-Bor-${id}" type="button"><img src="../../img/icon-trash-hover.svg" alt="fav"></button>
+                        <button class="icon" id= "${fuente}-Des-${id}" type="button"><img src="../../img/icon-download-hover.svg" alt="des"></button>
+                        <button class="icon" id= "${fuente}-Zoom-${id}" type="button"><img src="../../img/icon-max-hover.svg" alt="max"></button>
+                    </div>
+                    <div class="text">
+                        <span class="user">
+                            User
+                        </span>
+                        <span class="gif-titulo">
+                        ${titulo}
+                        </span>
+                    </div>
+                </div>
+            `;
+    }

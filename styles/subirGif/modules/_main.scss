@@ -62,6 +62,10 @@
                 .texto{
                     @include Roboto-regular(16px,black,29px); 
                 }
+
+                .pantalla2,.pantalla3{
+                    display: none;
+                }
             }
 
             .video{
@@ -91,7 +95,7 @@
             justify-content: space-between;
             
             
-            span {
+            .pasosItem{
                 display: inline-block;
                 width: 32px;
                 height: 32px;
@@ -99,6 +103,12 @@
                 border-radius: 50%;
                 @include Roboto-regular(18px,$text_color,33px); 
                 margin-top: 24px;
+                
+            }
+
+            .pasosItemActive{
+                background-color: #572EE5;
+                color: white;
             }
 
             
