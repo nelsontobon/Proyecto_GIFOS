@@ -1,5 +1,5 @@
 import {guardarGIF,addFavoritos,borrarGif} from './_funciones.js';
-import {planMisGifos,planZoomGif} from '../Templates/_plantillas.js'
+import {planMisGifos,planZoomGif} from '/Templates/_plantillas.js'
 
 /**
  * 

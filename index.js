@@ -1,7 +1,7 @@
 import {tema} from './utils/_Tema.js';
 import {TrendGifos} from './utils/_TrendGifos.js'
 import {reqBusqResult,reqBusqSugerencia,reqTrendigTerms} from './utils/_request.js'
-import {renderGif} from '../../utils/_renderGif.js'
+import {renderGif} from './utils/_renderGif.js'
 
 window.onload = ()=>{
 

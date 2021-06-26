@@ -1,10 +1,10 @@
 import {
     tema
-} from '../../utils/_Tema.js';
+} from '/utils/_Tema.js';
 import {
     subirGif
-} from '../../utils/_request.js';
-import { addMyGif } from '../../utils/_funciones.js';
+} from '/utils/_request.js';
+import { addMyGif } from '/utils/_funciones.js';
 
 
 
