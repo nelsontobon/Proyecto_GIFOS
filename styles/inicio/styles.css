@@ -649,6 +649,10 @@ body.dark .principal .busqueda .bus-section .icon {
 }
 
 .principal .busqueda .bus-section .sugerencias .sugerencias-lista li:hover {
+  background-color: #EAF5FF;
+}
+
+body.dark .principal .busqueda .bus-section .sugerencias .sugerencias-lista li:hover {
   background-color: #222326;
 }
 

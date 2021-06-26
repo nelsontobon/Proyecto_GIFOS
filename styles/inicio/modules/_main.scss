@@ -115,11 +115,18 @@
                         width: 100%;
                         margin-top: 2px;
                         cursor: pointer;
+
                         &:hover{
-                            background-color: #222326;
+                            background-color: #EAF5FF;
                         }
+
+                        body.dark &{
+                            &:hover{
+                                background-color: #222326;
+                            }
+                        }
+
                     }
- 
                 }
             }
         }
