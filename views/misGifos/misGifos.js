@@ -27,7 +27,7 @@ window.onload = ()=>{
         let displayVermas = misGifos.length - gifPos < 12 ? 'none' : 'block'
         verMas.style.display = displayVermas
         gifsRender = misGifos.length - gifPos < 12 ? misGifos.length : 12
-        for (let item = gifPos item < gifsRender item++ ) {
+        for (let item = gifPos; item < gifsRender; item++ ) {
             renderGif(misGifos[item],gifos,'Favs')
             gifPos++
         }
@@ -41,7 +41,7 @@ window.onload = ()=>{
 
             gifsRender = misGifos.length - gifPos < 12 ? misGifos.length : 12
 
-            for (let item = gifPos item < gifsRender item++ ) {
+            for (let item = gifPos; item < gifsRender; item++ ) {
                 renderMisGifs(misGifos[item],gifos,'MisG')
                 gifPos++
             }

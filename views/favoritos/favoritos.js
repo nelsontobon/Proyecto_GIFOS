@@ -18,7 +18,7 @@ window.onload = ()=>{
         let displayVermas = Favoritos.length - gifPos < 12 ? 'none' : 'block'
         verMas.style.display = displayVermas
         gifsRender = Favoritos.length - gifPos < 12 ? Favoritos.length : 12
-        for (let item = gifPos item < gifsRender item++ ) {
+        for (let item = gifPos; item < gifsRender; item++ ) {
             renderGif(Favoritos[item],gifos,'Favs')
             gifPos++
         }
@@ -35,7 +35,7 @@ window.onload = ()=>{
 
             gifsRender = Favoritos.length - gifPos < 12 ? Favoritos.length : 12
 
-            for (let item = gifPos item < gifsRender item++ ) {
+            for (let item = gifPos; item < gifsRender; item++ ) {
                 renderGif(Favoritos[item],gifos,'Favs')
                 gifPos++
             }
