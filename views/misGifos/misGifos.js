@@ -1,7 +1,7 @@
-import {tema} from './utils/_Tema.js';
-import {TrendGifos} from './utils/_TrendGifos.js'
-import {renderMisGifs} from './utils/_renderMiGif.js'
-import { reqMisGifs } from './utils/_request.js';
+import {tema} from '/utils/_Tema.js';
+import {TrendGifos} from '/utils/_TrendGifos.js'
+import {renderMisGifs} from '/utils/_renderMiGif.js'
+import { reqMisGifs } from '/utils/_request.js';
 
 
 window.onload = ()=>{

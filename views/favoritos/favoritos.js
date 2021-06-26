@@ -1,6 +1,6 @@
-import {tema} from './utils/_Tema.js';
-import {TrendGifos} from './utils/_TrendGifos.js'
-import {renderGif} from './utils/_renderGif.js'
+import {tema} from '/utils/_Tema.js';
+import {TrendGifos} from '/utils/_TrendGifos.js'
+import {renderGif} from '/utils/_renderGif.js'
 
 window.onload = ()=>{
 
