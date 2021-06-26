@@ -1,6 +1,7 @@
 import {guardarGIF,addFavoritos} from './_funciones.js';
 import {planTrendingGifos,planZoomGif} from '../Templates/_plantillas.js'
 
+
 /**
  * 
  * @param {*} dataItem obejeto de respuesta de la API GIPHY a por gif
@@ -55,8 +56,6 @@ export function renderGif(dataItem,contenedorPadre,fuente) {
         cerrar.onclick = () => {
             zoom.style.display = "none";
             zoomContenido.innerHTML = '';
-            // gifos.innerHTML = '';
-            // TrendGifos()
         }
 
     })

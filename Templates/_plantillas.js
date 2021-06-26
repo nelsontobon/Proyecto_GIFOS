@@ -12,9 +12,9 @@ export function planTrendingGifos (url,titulo, id, imgFav,fuente) {
     return  `   <img src="${url}"  class="img">
                 <div class="gifHover">
                     <div class="icons">
-                        <button class="icon" id= "${fuente}-Fav-${id}" type="button"><img src="../../img/icon-fav-${imgFav}.svg" alt="fav"></button>
-                        <button class="icon" id= "${fuente}-Des-${id}" type="button"><img src="../../img/icon-download-hover.svg" alt="des"></button>
-                        <button class="icon" id= "${fuente}-Zoom-${id}" type="button"><img src="../../img/icon-max-normal.svg" alt="max"></button>
+                        <button class="icon" id= "${fuente}-Fav-${id}" type="button"><img src="/img/icon-fav-${imgFav}.svg" alt="fav"></button>
+                        <button class="icon" id= "${fuente}-Des-${id}" type="button"><img src="/img/icon-download-hover.svg" alt="des"></button>
+                        <button class="icon" id= "${fuente}-Zoom-${id}" type="button"><img src="/img/icon-max-normal.svg" alt="max"></button>
                     </div>
                     <div class="text">
                         <span class="user">
@@ -49,8 +49,8 @@ export function planZoomGif (url, titulo, id, zoomImgFav){
                         </span>
                     </div>
                     <div class="barra-icon">
-                        <button class="icon" id= "Zoom-Fav-${id}" type="button"><img src="../../img/icon-fav-${zoomImgFav}.svg" alt="fav"></button>
-                        <button class="icon" id= "Zoom-Des-${id}" type="button"><img src="../../img/icon-download.svg" alt="des"></button>
+                        <button class="icon" id= "Zoom-Fav-${id}" type="button"><img src="/img/icon-fav-${zoomImgFav}.svg" alt="fav"></button>
+                        <button class="icon" id= "Zoom-Des-${id}" type="button"><img src="/img/icon-download.svg" alt="des"></button>
                     </div>
                 </div>
             `;
@@ -61,9 +61,9 @@ export function planMisGifos (url,titulo, id, imgDel,fuente) {
     return  `   <img src="${url}"  class="img">
                 <div class="gifHover">
                     <div class="icons">
-                        <button class="icon" id= "${fuente}-Bor-${id}" type="button"><img src="../../img/icon-trash-hover.svg" alt="fav"></button>
-                        <button class="icon" id= "${fuente}-Des-${id}" type="button"><img src="../../img/icon-download-hover.svg" alt="des"></button>
-                        <button class="icon" id= "${fuente}-Zoom-${id}" type="button"><img src="../../img/icon-max-hover.svg" alt="max"></button>
+                        <button class="icon" id= "${fuente}-Bor-${id}" type="button"><img src="/img/icon-trash-hover.svg" alt="fav"></button>
+                        <button class="icon" id= "${fuente}-Des-${id}" type="button"><img src="/img/icon-download-hover.svg" alt="des"></button>
+                        <button class="icon" id= "${fuente}-Zoom-${id}" type="button"><img src="/img/icon-max-hover.svg" alt="max"></button>
                     </div>
                     <div class="text">
                         <span class="user">

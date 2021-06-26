@@ -1045,6 +1045,10 @@ body.dark .footer::after {
   position: relative;
 }
 
+body.dark .principal .contenido .contenido-gif {
+  border: 1px solid white;
+}
+
 .principal .contenido .contenido-gif .Gif {
   width: 480px;
   height: 320px;
@@ -1088,6 +1092,10 @@ body.dark .footer::after {
   opacity: none;
 }
 
+body.dark .principal .contenido .contenido-gif .Gif .texto {
+  color: white;
+}
+
 .principal .contenido .contenido-gif .Gif .pantalla2, .principal .contenido .contenido-gif .Gif .pantalla3 {
   display: none;
 }
@@ -1112,6 +1120,10 @@ body.dark .footer::after {
 .principal .contenido .contenido-gif .label .link {
   border-bottom: 2px solid #5ED7C6;
   cursor: pointer;
+}
+
+body.dark .principal .contenido .contenido-gif .label {
+  color: white;
 }
 
 .principal .contenido .pasos {
@@ -1149,6 +1161,16 @@ body.dark .footer::after {
   color: white;
 }
 
+body.dark .principal .contenido .pasos .pasosItem {
+  border: 1px solid white;
+  color: white;
+}
+
+body.dark .principal .contenido .pasos .pasosItemActive {
+  background-color: white;
+  color: #37383c;
+}
+
 .principal .contenido .separador {
   display: inline-block;
   min-width: 100%;
@@ -1156,6 +1178,10 @@ body.dark .footer::after {
   background: #572EE5;
   border-radius: 5px;
   margin-top: 19px;
+}
+
+body.dark .principal .contenido .separador {
+  background: white;
 }
 
 .principal .contenido .btn {
@@ -1173,6 +1199,11 @@ body.dark .footer::after {
   text-align: center;
   margin-top: 20px;
   display: none;
+}
+
+body.dark .principal .contenido .btn {
+  border: 1px solid white;
+  color: white;
 }
 
 .principal .contenido .Comenzar {
@@ -1194,4 +1225,4 @@ body.dark .footer::after {
     margin-top: 0;
   }
 }
-/*# sourceMappingURL=subirGif.css.map */
+/*# sourceMappingURL=crearGif.css.map */

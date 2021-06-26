@@ -10,8 +10,10 @@ import { addMyGif } from '../../utils/_funciones.js';
 
 window.onload = () => {
     tema()
+    imgTema()
+    let nocturno = document.getElementById('nocturno')
+    nocturno.addEventListener('click',imgTema)
 
-    let gif = document.getElementById('gif')
 
     let pantallas = document.getElementsByClassName('pantalla')
     let botones = document.getElementsByClassName('btn')
@@ -122,11 +124,23 @@ window.onload = () => {
         pasos[siguiente].classList.add("pasosItemActive");
     }
 
-
     function Tiempo(){
         let s = parseInt(video.currentTime % 60);
         let m = parseInt((video.currentTime / 60) % 60);
         label.innerHTML = '0:'+ m + ':' + s ;
     }   
 
+    function imgTema(){
+        let camara = document.getElementById('camara-img')
+        let pelicula = document.getElementById('pelicula-img')
+        let tema = localStorage.getItem('tema')
+
+        if(tema == 'oscuro'){
+            camara.setAttribute('src','/img/camara-modo-noc.svg')
+            pelicula.setAttribute('src','/img/pelicula-modo-noc.svg')        }
+        else if (tema == 'claro'){
+            camara.setAttribute('src','/img/camara.svg')
+            pelicula.setAttribute('src','/img/pelicula.svg')
+        }
+    }
 }// fin onload

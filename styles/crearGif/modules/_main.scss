@@ -40,6 +40,9 @@
             height: 390px;
             position: relative;
             
+            body.dark &{
+                border: 1px solid white;
+            }
 
             .Gif{
                 width: 480px;
@@ -61,6 +64,9 @@
 
                 .texto{
                     @include Roboto-regular(16px,black,29px); 
+                    body.dark &{
+                        color: white;
+                    }
                 }
 
                 .pantalla2,.pantalla3{
@@ -82,6 +88,10 @@
                 .link{
                     border-bottom: 2px solid #5ED7C6;
                     cursor: pointer;
+                }
+
+                body.dark &{
+                    color: white;
                 }
             }
 
@@ -110,8 +120,19 @@
                 background-color: #572EE5;
                 color: white;
             }
-
             
+            body.dark &{
+                .pasosItem{
+                    border: 1px solid white;
+                    color: white;
+                }
+
+                .pasosItemActive{
+                    background-color: white;
+                    color: #37383c;
+                }
+            }
+
         }
 
         .separador{
@@ -121,6 +142,10 @@
             background: #572EE5;
             border-radius: 5px;
             margin-top: 19px;
+
+            body.dark &{
+                background: white;
+            }
         }
         
         .btn {
@@ -133,6 +158,11 @@
             @include Montserrat-bold(13px,$text_color,none); 
             margin-top: 20px;
             display: none;
+
+            body.dark &{
+                border: 1px solid white;
+                color: white;
+            }
         }
 
         .Comenzar{

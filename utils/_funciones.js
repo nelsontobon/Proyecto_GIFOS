@@ -30,7 +30,7 @@ export function addFavoritos(btnFav,data){
             Favoritos.splice(indice,1)
             if (Favoritos.length > 0){
                 localStorage.setItem('Favoritos', JSON.stringify(Favoritos))
-                btnFav.innerHTML =  '<img src="../../img/icon-fav-hover.svg" alt="Fav">'
+                btnFav.innerHTML =  '<img src="/img/icon-fav-hover.svg" alt="Fav">'
             }else{
                 localStorage.removeItem('Favoritos')
             }
@@ -39,12 +39,12 @@ export function addFavoritos(btnFav,data){
         }else{
             Favoritos.push(data)
             localStorage.setItem('Favoritos', JSON.stringify(Favoritos))
-            btnFav.innerHTML =  '<img src="../../img/icon-fav-active.svg" alt="Fac"></img>'
+            btnFav.innerHTML =  '<img src="/img/icon-fav-active.svg" alt="Fac"></img>'
         }   
     }else{
         Favoritos.push(data)
         localStorage.setItem('Favoritos', JSON.stringify(Favoritos))
-        btnFav.innerHTML =  '<img src="../../img/icon-fav-active.svg" alt="Fav"></img>'
+        btnFav.innerHTML =  '<img src="/img/icon-fav-active.svg" alt="Fav"></img>'
     }
 }
 
