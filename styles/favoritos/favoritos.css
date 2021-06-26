@@ -700,6 +700,16 @@ body.dark .header .header-content .menu-label1 {
   border-color: white;
 }
 
+body.dark .principal .contenido .bus-ver button {
+  border: 1px solid white;
+  color: white;
+}
+
+body.dark .principal .contenido .bus-ver button:hover {
+  background-color: white;
+  color: #37383C;
+}
+
 @media (min-width: 768px) {
   .principal .titulo {
     width: 580px;

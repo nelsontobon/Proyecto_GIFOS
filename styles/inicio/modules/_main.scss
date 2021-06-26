@@ -110,11 +110,16 @@
                     width: 100%;
 
                     li{
-                        @include Roboto-regular(16px,#9CAFC3,20px);
+                        @include Roboto-regular(16px,#9CAFC3,30px);
                         text-align: left;
                         width: 100%;
+                        margin-top: 2px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #222326;
+                        }
                     }
-                    
+ 
                 }
             }
         }
@@ -182,6 +187,16 @@
                     background-color: $color;
                     color: white;
                     border-color: white;
+                }
+
+                body.dark &{
+                    border: 1px solid white;
+                    color: white;
+
+                    &:hover{
+                        background-color: white;
+                        color: $bg_color_nocturno;
+                    }
                 }
             }
             

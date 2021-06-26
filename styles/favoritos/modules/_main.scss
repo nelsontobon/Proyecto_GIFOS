@@ -55,6 +55,16 @@
                     color: white;
                     border-color: white;
                 }
+
+                body.dark &{
+                    border: 1px solid white;
+                    color: white;
+
+                    &:hover{
+                        background-color: white;
+                        color: $bg_color_nocturno;
+                    }
+                }
             }
         }
     }

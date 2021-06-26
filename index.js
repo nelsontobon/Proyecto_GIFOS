@@ -23,6 +23,7 @@ window.onload = ()=>{
     let verMasFlag = 0;
 
     let busqIconClose = document.getElementById('bus-icon-close')
+    let sugerenciasClick = []
 
     busqIconClose.addEventListener('click',()=>{
         let busContenedores = document.getElementsByClassName('busq')
@@ -79,11 +80,16 @@ window.onload = ()=>{
 
                 for (let i in Response.data){
                     let newLi = document.createElement('li')
-                    newLi.innerHTML = Response.data[i].name
-                    sugerenciasLista.append(newLi)
-                }
 
-                // busqIcon.innerHTML = '<i class="fas fa-times icon"></i>'
+                    newLi.innerHTML = Response.data[i].name
+                    newLi.setAttribute('id', `sug-${i}`)
+                    sugerenciasLista.append(newLi)
+
+                    sugerenciasClick[i] = document.getElementById(`sug-${i}`)
+                    sugerenciasClick[i].addEventListener('click', () => {
+                        busqPalabra.value = sugerenciasClick[i].textContent
+                    })
+                }
             }
         )
     })
