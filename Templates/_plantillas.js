@@ -4,6 +4,7 @@
  * @param {*} titulo titulo del GIF
  * @param {*} id ID que se le quiere poner al gif
  * @param {*} imgFav si el gif ya se encuentra en favoritos cambia el tipo de img antes de pintar
+ * @param {*} fuente paralabra para difenrencia donde se da el evento
  * @returns 
  */
 
@@ -25,7 +26,7 @@ export function planTrendingGifos (url,titulo, id, imgFav,fuente) {
                         </span>
                     </div>
                 </div>
-            `;
+            `
     }
 
 /**
@@ -53,9 +54,18 @@ export function planZoomGif (url, titulo, id, zoomImgFav){
                         <button class="icon" id= "Zoom-Des-${id}" type="button"><img src="/img/icon-download.svg" alt="des"></button>
                     </div>
                 </div>
-            `;
+            `
 }
 
+/**
+ * estructura del GIF para la pagina de Mis Gifos
+ * @param {*} url URL del gif
+ * @param {*} titulo titulo del GIF
+ * @param {*} id ID que se le quiere poner al gif
+ * @param {*} imgDel 
+ * @param {*} fuente paralabra para difenrencia donde se da el evento
+ * @returns 
+ */
 
 export function planMisGifos (url,titulo, id, imgDel,fuente) { 
     return  `   <img src="${url}"  class="img">
@@ -74,5 +84,5 @@ export function planMisGifos (url,titulo, id, imgDel,fuente) {
                         </span>
                     </div>
                 </div>
-            `;
+            `
     }

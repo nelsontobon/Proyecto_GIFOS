@@ -1,6 +1,6 @@
-import {tema} from '/utils/_Tema.js';
-import {subirGif} from '/utils/_request.js';
-import { addMyGif } from '/utils/_funciones.js';
+import {tema} from '/utils/_Tema.js'
+import {subirGif} from '/utils/_request.js'
+import { addMyGif } from '/utils/_funciones.js'
 
 
 
@@ -44,13 +44,13 @@ window.onload = () => {
                     frameRate: 1,
                     quality: 10,
                     hidden: 240
-                });
+                })
 
                 cambiarPantalla(1,2)
                 cambiarBotones(0,1)
                 cambiarPaso(0,1)
 
-                video.srcObject = stream;
+                video.srcObject = stream
                 video.play()
 
                 grabar.addEventListener('click',  function grabarFunc() {
@@ -58,18 +58,18 @@ window.onload = () => {
                     this.removeEventListener('click',grabarFunc)
                     cambiarBotones(1,2)
 
-                    recorder.startRecording();
+                    recorder.startRecording()
                     let tiempo = setInterval(Tiempo,1000)
                     
                     parar.addEventListener('click', function pararFunc() {
-                        clearInterval(tiempo);
+                        clearInterval(tiempo)
                         this.removeEventListener('click',pararFunc)
 
-                        let form = new FormData();
+                        let form = new FormData()
                         recorder.stopRecording()
-                        video.pause();
+                        video.pause()
 
-                        form.append('file', recorder.getBlob(), 'myGif.gif');
+                        form.append('file', recorder.getBlob(), 'myGif.gif')
 
                         cambiarBotones(2,3)
 
@@ -82,7 +82,7 @@ window.onload = () => {
                                     addMyGif(response.data.id)
                                     cambiarPantalla(2,0)
                                     cambiarBotones(3,0)
-                                    pasos[2].classList.remove("pasosItemActive");
+                                    pasos[2].classList.remove("pasosItemActive")
                                 }
                                 
                             })
@@ -116,14 +116,14 @@ window.onload = () => {
     }
 
     function cambiarPaso (anterior, siguiente){
-        pasos[anterior].classList.remove("pasosItemActive");
-        pasos[siguiente].classList.add("pasosItemActive");
+        pasos[anterior].classList.remove("pasosItemActive")
+        pasos[siguiente].classList.add("pasosItemActive")
     }
 
     function Tiempo(){
-        let s = parseInt(video.currentTime % 60);
-        let m = parseInt((video.currentTime / 60) % 60);
-        label.innerHTML = '0:'+ m + ':' + s ;
+        let s = parseInt(video.currentTime % 60)
+        let m = parseInt((video.currentTime / 60) % 60)
+        label.innerHTML = '0:'+ m + ':' + s 
     }   
 
     function imgTema(){

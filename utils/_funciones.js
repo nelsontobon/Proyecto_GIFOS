@@ -5,12 +5,12 @@
  */
 
 export async function guardarGIF(urlGIF,title){
-    let response = await fetch(urlGIF);
-    let urlBlob = await response.blob();                                                
-    let url =  URL.createObjectURL(urlBlob);
-    let a =  document.createElement('a');
-    a.href = url;
-    a.download = title ;
+    let response = await fetch(urlGIF)
+    let urlBlob = await response.blob()                                                
+    let url =  URL.createObjectURL(urlBlob)
+    let a =  document.createElement('a')
+    a.href = url
+    a.download = title 
     a.click()
 
 }
@@ -25,7 +25,7 @@ export async function guardarGIF(urlGIF,title){
 export function addFavoritos(btnFav,data){
     let Favoritos = JSON.parse(localStorage.getItem('Favoritos')) ? JSON.parse(localStorage.getItem('Favoritos')) : []
     if (Favoritos.length > 0 ){
-        let indice = Favoritos.findIndex(Favoritos => Favoritos.id === data.id );
+        let indice = Favoritos.findIndex(Favoritos => Favoritos.id === data.id )
         if (indice > -1){
             Favoritos.splice(indice,1)
             if (Favoritos.length > 0){
@@ -48,18 +48,26 @@ export function addFavoritos(btnFav,data){
     }
 }
 
+/**
+ * funcion para agregar un gif creado a el local storage
+ * @param {*} id id del gif creadp
+ */
 export function addMyGif(id){
     let MyGifs = JSON.parse(localStorage.getItem('MyGifs')) ? JSON.parse(localStorage.getItem('MyGifs')) : []
     MyGifs.push(id)
     localStorage.setItem('MyGifs', JSON.stringify(MyGifs))
 }
 
+/**
+ * funcion para borrar un gif de la coleccion MyGifs del local storage
+ * @param {*} data 
+ */
 export function borrarGif(data){
     let misGifos = JSON.parse(localStorage.getItem('MyGifs')) 
     if (misGifos.length > 0 ){
-        let indice = misGifos.findIndex(Gifos => Gifos === data.id );
+        let indice = misGifos.findIndex(Gifos => Gifos === data.id )
         if (indice > -1){
-            console.log('encontrado');
+            console.log('encontrado')
             misGifos.splice(indice,1)
             if (misGifos.length > 0){
                 localStorage.setItem('MyGifs', JSON.stringify(misGifos))
@@ -68,10 +76,10 @@ export function borrarGif(data){
             }
             
         }else{
-            console.log('no exitste');
+            console.log('no exitste')
         }   
     }
 
-    location.reload();
+    location.reload()
 
 }

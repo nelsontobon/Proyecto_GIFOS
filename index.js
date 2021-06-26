@@ -1,4 +1,4 @@
-import {tema} from '/utils/_Tema.js';
+import {tema} from '/utils/_Tema.js'
 import {TrendGifos} from '/utils/_TrendGifos.js'
 import {reqBusqResult,reqBusqSugerencia,reqTrendigTerms} from '/utils/_request.js'
 import {renderGif} from '/utils/_renderGif.js'
@@ -6,7 +6,7 @@ import {renderGif} from '/utils/_renderGif.js'
 window.onload = ()=>{
 
     tema()
-    TrendGifos();
+    TrendGifos()
 
     reqTrendigTerms().then(
         (Response) => {
@@ -19,8 +19,8 @@ window.onload = ()=>{
     let busqIconBucar = document.getElementById('bus-icon-busq')
     
     let verMas = document.getElementById('vermas')
-    let gifsPos = 0;
-    let verMasFlag = 0;
+    let gifsPos = 0
+    let verMasFlag = 0
 
     let busqIconClose = document.getElementById('bus-icon-close')
     let sugerenciasClick = []
@@ -43,7 +43,7 @@ window.onload = ()=>{
 
         gifsPos = 0
         verMasFlag = 0
-        BuscarGifs();
+        BuscarGifs()
     } )
     
     busqPalabra.addEventListener('keydown', (event)=>{
@@ -54,7 +54,7 @@ window.onload = ()=>{
                 busqIconClose.style.display = 'block'
                 gifsPos = 0
                 verMasFlag = 0
-                BuscarGifs();
+                BuscarGifs()
         }
     })
 
@@ -115,7 +115,7 @@ window.onload = ()=>{
                     busContenedores[3].style.display = 'block'
 
                     for (let item in Response.data){
-                        renderGif(Response.data[item],busContenedores[2]);
+                        renderGif(Response.data[item],busContenedores[2])
                         gifsPos++
                     }
                 }else{
@@ -123,7 +123,7 @@ window.onload = ()=>{
                     busContenedores[2].innerHTML = `<div class="sinResultados">
                         <img src="./img/icon-busqueda-sin-resultado.svg" alt="sin resultado">
                         <p>Intenta con otra búsqueda.</p>
-                        </div>`;
+                        </div>`
                 }
 
                 
