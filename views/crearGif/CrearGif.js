@@ -14,44 +14,41 @@ window.onload = () => {
     let pantallas = document.getElementsByClassName('pantalla')
     let botones = document.getElementsByClassName('btn')
     let pasos = document.getElementsByClassName('pasosItem')
+    let carga = document.getElementsByClassName('cargando')
+
 
     let comenzar = document.getElementById('comenzar')
     let grabar = document.getElementById('grabar')
     let parar = document.getElementById('parar')
     let subir = document.getElementById('subir')
 
-    let video = document.getElementById('video')
+    let videoHTML = document.getElementById('video')
     let label = document.getElementById('label')
+
 
     comenzar.addEventListener('click', getStreamAndRecord)
 
     function getStreamAndRecord() {
-        
+        loadGif('reset')
         cambiarPantalla(0,1)
         cambiarPaso(0,0)
 
         navigator.mediaDevices.getUserMedia({
             audio: false,
-            video: {
-                width: {ideal: 480},
-                height: {ideal: 320}
-            }
+            video: { width: 480, height: 320 } 
         }).then(
             (stream) => {
 
                 let recorder = RecordRTC(stream, {
-                    type: 'gif',
-                    frameRate: 1,
-                    quality: 10,
-                    hidden: 240
+                    type: 'gif'
                 })
 
                 cambiarPantalla(1,2)
                 cambiarBotones(0,1)
                 cambiarPaso(0,1)
 
-                video.srcObject = stream
-                video.play()
+                videoHTML.srcObject = stream
+                videoHTML.play()
 
                 grabar.addEventListener('click',  function grabarFunc() {
 
@@ -67,7 +64,7 @@ window.onload = () => {
 
                         let form = new FormData()
                         recorder.stopRecording()
-                        video.pause()
+                        videoHTML.pause()
 
                         form.append('file', recorder.getBlob(), 'myGif.gif')
 
@@ -76,15 +73,19 @@ window.onload = () => {
                         subir.addEventListener('click', function subirFunc() {
                             this.removeEventListener('click',subirFunc)
                             cambiarPaso(1,2)
+                            loadGif('mostrar')
+                            subir.style.display = 'none'
                             subirGif(form).then((response) => {
                                 console.log(response)
                                 if (response){
+                                    loadGif('gifOk')
+                                    
                                     addMyGif(response.data.id)
-                                    cambiarPantalla(2,0)
-                                    cambiarBotones(3,0)
+                                    // cambiarPantalla(2,0)
+                                    // cambiarBotones(3,0)
                                     pasos[2].classList.remove("pasosItemActive")
+
                                 }
-                                
                             })
                         })
                         
@@ -94,9 +95,9 @@ window.onload = () => {
                         repetir.addEventListener('click', () => {
                             label.innerHTML = ''
                             form = ''
+                            loadGif('reset')
                             cambiarPantalla(2,0)
                             cambiarBotones(3,0)
-
                         })
                         
                     })
@@ -121,8 +122,8 @@ window.onload = () => {
     }
 
     function Tiempo(){
-        let s = parseInt(video.currentTime % 60)
-        let m = parseInt((video.currentTime / 60) % 60)
+        let s = parseInt(videoHTML.currentTime % 60)
+        let m = parseInt((videoHTML.currentTime / 60) % 60)
         label.innerHTML = '0:'+ m + ':' + s 
     }   
 
@@ -137,6 +138,25 @@ window.onload = () => {
         else if (tema == 'claro'){
             camara.setAttribute('src','/img/camara.svg')
             pelicula.setAttribute('src','/img/pelicula.svg')
+        }
+    }
+
+    function loadGif(estado){
+        switch (estado){
+            case 'mostrar':
+                carga[0].style.display = 'flex'
+                break
+            case 'gifOk':
+                carga[1].setAttribute('src', '/img/ok.svg')
+                carga[2].textContent = 'GIFO subido con éxito'
+                break
+            case 'reset':
+                carga[0].style.display = 'none'
+                carga[1].setAttribute('src', '/img/loader.svg')
+                carga[2].textContent = 'Estamos subiendo tu GIFO'
+                break
+            default:
+                console.error('error')
         }
     }
 }// fin onload

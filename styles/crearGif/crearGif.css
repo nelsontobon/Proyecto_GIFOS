@@ -1100,12 +1100,12 @@ body.dark .principal .contenido .contenido-gif .Gif .texto {
   display: none;
 }
 
-.principal .contenido .contenido-gif .video {
+.principal .contenido .contenido-gif .Gif .video {
   width: 480px;
   height: 320px;
 }
 
-.principal .contenido .contenido-gif .label {
+.principal .contenido .contenido-gif .Gif .label {
   position: absolute;
   right: 0;
   bottom: -52px;
@@ -1117,13 +1117,41 @@ body.dark .principal .contenido .contenido-gif .Gif .texto {
   text-align: center;
 }
 
-.principal .contenido .contenido-gif .label .link {
+.principal .contenido .contenido-gif .Gif .label .link {
   border-bottom: 2px solid #5ED7C6;
   cursor: pointer;
 }
 
-body.dark .principal .contenido .contenido-gif .label {
+body.dark .principal .contenido .contenido-gif .Gif .label {
   color: white;
+}
+
+.principal .contenido .contenido-gif .Gif .carga {
+  display: none;
+  width: 480px;
+  height: 320px;
+  margin: 35px 104px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  opacity: 0.6;
+  background: #572EE5;
+  z-index: 99;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  line-height: 22px;
+  text-align: center;
 }
 
 .principal .contenido .pasos {

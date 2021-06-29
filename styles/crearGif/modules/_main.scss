@@ -72,30 +72,47 @@
                 .pantalla2,.pantalla3{
                     display: none;
                 }
-            }
 
-            .video{
-                width: 480px;
-                height: 320px;
-            }
-
-            .label{
-                position: absolute;
-                right: 0;
-                bottom: -52px;
-                @include Montserrat-bold(15px,$text_color,22px);
-
-                .link{
-                    border-bottom: 2px solid #5ED7C6;
-                    cursor: pointer;
+                .video{
+                    width: 480px;
+                    height: 320px;
+                }
+    
+                .label{
+                    position: absolute;
+                    right: 0;
+                    bottom: -52px;
+                    @include Montserrat-bold(15px,$text_color,22px);
+    
+                    .link{
+                        border-bottom: 2px solid #5ED7C6;
+                        cursor: pointer;
+                    }
+    
+                    body.dark &{
+                        color: white;
+                    }
                 }
 
-                body.dark &{
+                .carga{
+                    display: none;
+                    width: 480px;
+                    height: 320px;
+                    margin: 35px 104px;
+
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+
+                    position: fixed;
+                    opacity: 0.6;
+                    background: #572EE5;
+                    z-index: 99 ;
+
                     color: white;
+                    @include Montserrat-bold(15px,white,22px);
                 }
             }
-
-
         }
 
         .pasos{
