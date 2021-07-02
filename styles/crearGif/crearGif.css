@@ -477,9 +477,6 @@ body.dark .header .header-content .menu-label1 {
   .header .header-content div {
     margin: 0% 156px 0% 156px;
   }
-}
-
-@media (min-width: 1439px) {
   .header .header-content .menu-lista ul li a .add {
     display: block;
     margin: 0;

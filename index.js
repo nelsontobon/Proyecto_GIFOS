@@ -88,8 +88,10 @@ window.onload = ()=>{
                     sugerenciasClick[i] = document.getElementById(`sug-${i}`)
                     sugerenciasClick[i].addEventListener('click', () => {
                         busqPalabra.value = sugerenciasClick[i].textContent
+                        BuscarGifs()
                     })
                 }
+
             }
         )
     })
